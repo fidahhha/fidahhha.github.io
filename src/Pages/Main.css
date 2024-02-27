@@ -1,0 +1,542 @@
+/* CSS for the navigation bar */
+.navbar {
+    overflow: hidden;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Place it at the top of the page */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: transparent;
+    text-align: center; /* Center the text */
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Ensure the list items stay inline */
+}
+
+.navbar li {
+    display: inline; /* Display list items inline */
+}
+
+.navbar li a {
+    display: inline-block; /* Display anchor elements as blocks */
+    padding: 14px 16px;
+    transition: ease-in-out 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: #a24c71;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.navbar.active {
+    background-color: #0000007e; /* Change background color when active */
+}
+
+.navbar li a.active {
+    background-color: #a9414c; /* Change background color of active link */
+}
+
+/* -------------------------- Body ------------------------ */
+.HomeContainer {
+  background-image: url("../Images/BG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  min-height: 140vh;
+}
+
+.HeaderContainer {
+  width: 63%;
+  margin: auto;
+  margin-top: -400px;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 550px;
+  display: flex;
+  position: relative;
+  z-index: 2; 
+}
+
+.column {
+  float: left;
+  margin: auto;
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px;
+  min-width: 350px;
+  height: 250px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column img {
+  width: 30px;
+  height: 30px;
+}
+
+.column-icon {
+  background-color: #fcabb37c;
+  padding: 10px;
+  transition: transform 0.5s;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+
+.column-icon:hover {
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5); 
+  background-color: #f8a6ae;
+  transform: scale(0.5) translateX(5px); 
+}
+
+
+.column-icon:hover {
+  cursor: pointer;
+  transform: translateX(1px);
+}
+
+.column-icon:hover:not(:first-of-type) {
+  cursor: pointer;
+  transform: translateX(20px);
+}
+
+.column-icon:first-of-type:hover {
+  cursor: pointer;
+  transform: none;
+}
+
+.project-title {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-left: -1px;
+  margin-top: 60px;
+}
+
+.project-subtitle {
+  color: #cdd3d4;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-top: -10px;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 60px;
+}
+
+.column-link-1 {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  color: #fde4e4;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.column-link-2 {
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  color: #fde4e4;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.view-projectsBTN {
+  border-radius: 5px;
+  background: #ff9c97;
+  width: 143px;
+  height: 37px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  text-decoration: none;
+  border: none;
+  color: #2d363b;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  transition: 0.5s;
+  line-height: normal;
+}
+
+.view-projectsBTN:hover {
+  background-color: hwb(354 25% 34%);
+  color: white;
+}
+
+.gallery {
+  position: absolute;
+  margin: auto;
+  top: 120px;
+  margin-left: 90px; /* Adjust as needed */
+  z-index: 1; /* Ensure the .gallery appears above the navigation bar */
+}
+
+.popup-container {
+  position: fixed;
+  border-radius: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+}
+
+.popup {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.DescriptionDetails {
+  color: black;
+  font-size: 13px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.popup-content {
+  width: 110%;
+  margin-left: -30px;
+  text-align: center;
+  position: relative;
+}
+
+.Description {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.close {
+  position: absolute; /* Set position absolute for the close button */
+  bottom: -50px; /* Adjust bottom position as needed */
+  left: 50px;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+  background: rgba(255, 157, 151, 0.7);
+  color: #2d363b;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 2px;
+  outline: none;
+}
+
+.close:hover {
+  background-color: #a9414c;
+  color: white;
+}
+
+.ContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ContainerProject {
+  width: 100%;
+  margin-top: 100px;
+  height: auto;
+  padding: 20px;
+  background: rgb(209, 149, 146);
+  background: linear-gradient(170deg, #b58595 0%, #c6a0b5 100%);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+}
+
+.ContainerProjectDetails {
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  height: 250px;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+.ContainerProjectDetails h1 {
+  text-align: center;
+  color: #fde4e4;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.ContainerProjectDetails h3 {
+  color: rgb(209, 149, 146);
+  text-transform: none;
+  font-size: 18px;
+  letter-spacing: normal;
+}
+
+.ContainerProject2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(209, 149, 146);
+  background: linear-gradient(170deg, #b58595 0%, #c6a0b5 100%);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+}
+
+.ContainerProject2 video {
+  border-radius: 20px;
+  width: 60%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .ContainerProject2 video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.ContainerProject2 iframe {
+  width: 70%;
+  height: 600px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.Poster {
+  width: 30%; /* Set the initial width of the poster */
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.HFKawena {
+  width: 70%;
+}
+.default-image {
+  width: 70%;
+  height: auto;
+  cursor: pointer;
+}
+
+.ContainerProject2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ContainerProject2 h1 {
+  text-align: center;
+  color: #fde4e4;
+  font-size: 32px;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.ContainerProject2 p {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.5px;
+  width: 100%;
+
+}
+
+.ContainerProject2 .button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust margin-bottom as needed */
+}
+
+.ContainerProject2 button {
+  border-radius: 5px;
+  background: #ff9c97;
+  width: auto;
+  height: 37px;
+  margin: 0 10px; /* Adjust margin between buttons */
+  text-decoration: none;
+  border: none;
+  color: #2d363b;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.5s;
+  line-height: normal;
+}
+
+.ContainerProject2 button:hover {
+  background-color: hwb(354 25% 34%);
+  color: white;
+}
+
+.CMSApplication{
+  width: 100%;
+}
+.full-screen-image {
+  /* Define styles for full-screen size */
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio */
+  background-color: rgba(0, 0, 0, 0.336); /* Semi-transparent overlay */
+  z-index: 9999; /* Ensure it's above other elements */
+  cursor: zoom-out; /* Show zoom-out cursor to indicate exiting full screen */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1200px) {
+  .ContainerProject2 iframe {
+    width: 90%;
+    height: 700px;
+  }
+
+  .ContainerProject2 img {
+    width: 90%; /* Set the width of the poster to occupy the full width of the container */
+  }
+}
+
+.ProjectDetails-icon {
+  height: 50px;
+  background-color: #f8a6ae;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  width: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+}
+
+.ContainerProject p {
+  text-align: left;
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.ContainerProject h1 {
+  text-align: center;
+  color: #fde4e4;
+  font-size: 32px;
+  margin-left: 70px;
+  text-align: left;
+  margin-bottom: -20px;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.problemStatement {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+.ContainerProject li {
+  margin-top: 20px; /* Adjust spacing between sections */
+  margin-left: 30px;
+  list-style: none;
+}
+
+.ListHeaders {
+  font-weight: bold;
+  text-align: left;
+  color: #fde4e4;
+  font-size: 15px;
+  margin-left: -1px;
+  margin-bottom: -10px;
+  font-style: normal;
+  text-align: left;
+}
+
+.ContainerProject ul {
+  margin-left: 15px;
+  text-align: justify;
+  color: white;
+  margin-right: 50px;
+  font-size: 15px;
+  line-height: 2;
+  margin-top: -5px;
+  font-style: normal;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.DesignProcessContainer {
+  text-align: center; /* Center the content horizontally */
+  float: left;
+  margin-left: 50px;
+}
+
+.ImageContainer {
+  display: inline-block;
+  padding-top: 20px;
+  margin: 20px; /* Adjust spacing between each container */
+}
+
+.DesignProcess-icon {
+  width: 80px;
+  background-color: #fde4e4;
+  padding: 15px;
+  border-radius: 15px;
+  display: block;
+}
+
+.DesignProcessContainer h2 {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  float: left;
+  margin-left: -2px;
+}
